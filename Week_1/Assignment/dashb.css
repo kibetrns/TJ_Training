@@ -1,0 +1,70 @@
+#profileSection {
+    background-color: #5746EA;
+    max-width: 180px;
+    border-radius: 16px;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+
+}
+
+.parent {
+    overflow: auto;
+    max-width: 800px;
+    max-height: 750px;
+}
+
+.parent > div  {
+    float: left;
+    width: 42%;
+}
+
+#profilePictureContainer {
+    border-radius: 50px;
+    background-position: center;
+    background-color: burlywood;
+    background-repeat: repeat;
+    padding: 16px;
+    border: 2px solid rgb(249, 249, 252);
+    width: 50px;
+    height: 50px;
+
+}
+
+
+#pSTopSection {
+    padding-bottom: 16px;
+  
+}
+
+#pSBottomSection {
+    background-color: #1D204B;
+    border-radius: 16px; 
+
+}
+.dashboardItemContainer {
+    border-radius: 16px;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 8px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+
+
+}
+#dashboardItem {
+    border-radius: 16px;
+    background-color: #0C1223;
+    flex-grow: 1;
+}
+
+
+@media (max-width: 789px) {
+    .dashboardItemContainer {
+        flex-direction: row;
+        flex: 100%;
+    }
+    
+}
