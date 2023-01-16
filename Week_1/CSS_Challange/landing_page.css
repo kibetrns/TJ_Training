@@ -41,6 +41,7 @@ span {
     padding: 8px;
     border-radius: 8px;
     justify-content: space-between;
+    font-family: 'Montserrat', ;
 }
 
 #login-and-sign-up-block {
@@ -73,6 +74,7 @@ span {
     border-radius: 48px;
     max-width: fit-content;
     margin-right: 24px;
+    font-family: 'Montserrat', ;
 }
 
 #learn-more-button {
@@ -82,6 +84,7 @@ span {
     border-radius: 48px;
     border: 1px solid #FFFFFF;
     max-width: fit-content;
+    font-family: 'Montserrat', ;
 }
 
 #quote-and-more-buttons-container {
@@ -104,6 +107,7 @@ ion-icon {
     padding-bottom: 16px;
     padding-right: 64px;
     padding-left: 16px;
+    font-family: 'Montserrat', ;
     /*border: 1px solid black;*/
 
 }
@@ -140,6 +144,7 @@ ion-icon {
     grid-template-columns: auto auto auto;
     justify-content: center; 
     margin-bottom: 32;  
+    
 }
 
 #qualities-item-content > p {
@@ -151,6 +156,7 @@ ion-icon {
     text-align: center;
     /*border: 1px solid black;*/
     width: fit-content;
+    font-family: 'Montserrat', ;
 }
 
 #qualities-item-two {
@@ -158,12 +164,14 @@ ion-icon {
     text-align: center;
     /*border: 1px solid black;*/
     width: fit-content;
+    font-family: 'Montserrat', ;
 }
 #qualities-item-three {
     padding: 16px;
     text-align: center;
     /*border: 1px solid black;*/
     width: fit-content;
+    font-family: 'Montserrat', ;
 }
 
 #qualities-container {
@@ -204,6 +212,7 @@ ion-icon {
     border: 1px solid lightgray;
     width: fit-content;
     border-radius: 3%;
+    
 }
 
 #testimonial-card-content > p {
@@ -220,10 +229,12 @@ ion-icon {
     grid-template-columns: auto auto auto; 
     justify-content: space-evenly;
     margin-top: 64px;
+    margin-bottom: 128px;
 }
 
 #testimonial-card-content {
     padding: 32px;
+    font-family: 'Montserrat', ;
 }
 
 
@@ -233,7 +244,10 @@ ion-icon {
     grid-template-rows: auto;
     justify-items: center;
     grid-auto-flow: column;
-    margin-top: 32px;
+    margin-top: 128px;
+    margin-bottom: 128px;
+    font-family: 'Montserrat', ;
+
 
 }
 
@@ -262,6 +276,7 @@ ion-icon {
 #search-bar-content {
     padding: 16px;
     border-radius: 3px;
+    font-family: 'Montserrat', ;
 }
 #search-bar-content > p {
     color:#737373;
@@ -298,6 +313,7 @@ ion-icon {
 }
 #right {
     color: #FFFFFF;
+    font-family: 'Montserrat', ;
     
 }
 #newsletter-subscription-content {
@@ -305,5 +321,242 @@ ion-icon {
     justify-content: space-between;
     padding: 16px;
 }
+
+#pricing-headline {
+    text-align: center;
+    margin-top: 128px;
+    font-family: 'Montserrat', ;
+}
+#pricing-headline > p {
+    color:#737373;
+}
+#pricing-content-header > p {
+    color:#737373;
+}
+
+#pricing-content-header-two > p {
+    color: #FFFFFF;
+    
+}
+
+#amount-sub-heading-one > ul > li {
+    list-style: none;
+}
+
+#amount-sub-heading-two > ul >li {
+    list-style: none;
+}
+
+#amount-sub-heading-three > ul > li {
+    list-style: none;
+
+}
+#pricing-content {
+    text-align: center;
+    border: 1px solid #23A6F0;
+    width: fit-content;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 0px;
+    padding-right: 32px;
+    border-radius: 8px;
+    font-family: 'Montserrat', ;
+}
+#pricing-content-two {
+    text-align: center;
+    border: 1px solid #23A6F0;
+    width: fit-content;
+    margin-top: -64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 0px;
+    padding-right: 32px;
+    border-radius: 8px;
+    background-color: #252B42;
+    color: #FFFFFF;
+    margin-left: -96px;
+    margin-right: -96px;
+    font-family: 'Montserrat', ;
+}
+
+#amount-sub-heading-one > h5 {
+    color: #23A6F0;
+    font-size: x-large;
+}
+
+#amount-sub-heading-two > h5 {
+    color: #23A6F0;
+    font-size: x-large;
+}
+
+#amount-sub-heading-three > h5 {
+    color: #23A6F0;
+    font-size: x-large;
+}
+#amount-sub-heading > ul {
+    font-weight: bolder;
+
+}
+#prcing-trial-button {
+    color: #FFFFFF;
+    background-color: #23A6F0;
+    border-radius: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 32px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    /*border: 1px solid black;*/
+    font-family: 'Montserrat', 800;
+    
+}
+#pricing-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 128px;
+    text-align: center;
+    padding: 16px;
+    
+}
+
+#global-branches-pic {
+    background-image: url(resources/images/pingwig.png);
+    width: 100%;
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment:scroll;
+    background-position: center;
+    
+   
+
+}
+#global-branches-message{ 
+    color: #FFFFFF;
+    font-family: 'Montserrat', ;
+}
+#global-branches-message > h3 {
+    font-size: xx-large;
+}
+
+
+
+#global-branches-container {
+    background-color: #252B42;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 356px;
+    margin-bottom : -300px;
+
+}
+
+#bac-left-side {
+    background-image: url(resources/images/contact.png);
+    width: 256px;
+    height: 556px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment:scroll;
+    background-position: center;
+    /*border: 1px solid black;*/
+    
+}
+#bac-lect-side > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+#bac-right-side {
+    width: 256px;
+    height: 556px;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+    text-align: center;
+
+}
+#booking-appointement-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    margin-bottom: 64px;
+
+
+
+}
+#bac-right-side > h3{
+    background-color: #23A6F0;
+    color: #FFFFFF;
+    font-family: 'Montserrat', ;
+    width: fit-content;
+    padding: 16px;
+    border-radius: 8px;
+    margin-left: 16px;
+
+}
+#contact-us-button {
+    color: #FFFFFF;
+    background-color: #23A6F0;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: 'Montserrat', ;
+}
+
+#bsh-message > p {
+    color: #737373;
+
+}
+
+#business-consulting-headline-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 32px;
+
+}
+
+#extras-before-footer-content {
+    text-align: center;
+    font-family: 'Montserrat', ;
+
+
+} 
+
+#extras-before-footer-content > div > p {
+    color: #737373;
+}
+
+#extras-before-footer-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-evenly;
+
+}
+
+#footer-container > p {
+    color: #737373;
+}
+
+#footer-container > div > ul > li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 16px;
+
+}
+
+#footer-container {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+}
+
+
+
 
 
