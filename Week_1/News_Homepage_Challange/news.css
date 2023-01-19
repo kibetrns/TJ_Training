@@ -1,0 +1,371 @@
+body{
+
+    max-width: 1336x;
+    font-family: 'Inter', sans-serif;
+    
+    margin-right: auto;
+    margin-left: auto;
+    /* border:  1px solid red ; */
+    margin: 32px;
+    
+
+}
+#header_navigation_content > ul > li {
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+
+.item-1-mobile-pic {
+    display: none;
+
+}
+.navigation-menu-icon-closed {
+    display: none;
+}
+.navigation-railway-rack > ul > a {
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+}
+
+.navigation-railway-rack > ul > a :hover{
+    
+    color:hsl(5, 85%, 63%);
+}
+
+@media screen and (max-width: 1440px) {
+    .navigation-header {
+        
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+        flex-wrap: nowrap;
+        
+    }
+    .navigation-u-list >  a   {
+        display: inline-flex;
+        padding: 0px 16px;
+        flex-direction: row;
+       
+        
+    }
+    .navigation-u-list > a :hover {
+        color:  hsl(5, 85%, 63%);
+        
+    }
+
+    .navigation-u-list > a {
+        list-style: none;
+        text-decoration: none;
+        color: hsl(236, 13%, 42%);
+        
+    }
+    .navigation-railway-rack {
+        display: none
+    }
+
+
+   
+
+    .final-container{ 
+        display: grid;
+        grid-template-columns: auto 455.33px auto;
+        grid-template-rows:  auto auto; 
+        gap: 32px;
+        /*Might have to change this; once design complete*/
+        
+}
+
+
+
+.item-1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* background-color: red; */
+    background-color:hsl(36, 100%, 99%)
+    
+}
+
+.item-1 img {
+    width: 100%;
+    object-fit: cover;
+   
+}
+
+
+
+
+.item-2 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: hsl(240, 100%, 5%);
+
+   
+}
+
+.item-3 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    
+   
+}
+
+
+button {
+    width: 48%;
+    background-color: hsl(5, 85%, 63%);
+    border: none;
+    padding: 8px;
+    color:hsl(36, 100%, 99%);
+    font-weight: 400;
+    text-transform: uppercase;
+    
+    
+}
+
+button :hover {
+    background-color: hsl(240, 100%, 5%);
+}
+
+.item-one-bottom-content-right {
+    margin-left: 16%;
+
+}
+
+.item-one-bottom-content  h1 {
+    font-style: normal;
+    font-weight: 800;
+    
+    
+
+
+}
+
+
+.item-one-bottom-content-right > p {
+
+   
+
+   
+    
+}
+
+.item-one-bottom-content {
+    display: flex;
+    gap: 32px;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-items: flex-end;
+
+    
+
+}
+.item-one-bottom-content-right {
+    display: flex;
+    flex-direction: column;
+
+   
+}
+.item-2-content > h1 {
+    color: hsl(35, 77%, 62%);
+    font-weight: 700;
+}
+
+.item-2-sub-content {
+    color: hsl(36, 100%, 99%);
+    font-weight: 400;
+    
+}
+
+.item-2-sub-content > a {
+    color: hsl(36, 100%, 99%);
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.item-2-sub-content > a :hover {
+    color: hsl(35, 77%, 62%);
+    display: inline-block;
+    text-decoration: none;
+}
+.item-2-content {
+    margin: 32px;
+}
+.item-2-sub-content-line {
+    border-bottom: 1px solid rgb(80, 80, 78);
+    width: 100%;
+    margin: auto;
+}
+
+
+
+
+
+.sub-item3-flex-content {
+    background-color: hsl(36, 100%, 99%);
+    /* border: 1px solid black; */
+    display: flex;
+    width:fit-content;
+    justify-content: space-evenly;
+    margin-right: 32px;
+    /* margin: 16px, 16px; */
+    
+    
+    
+    
+
+
+}
+
+.sub-item3-flex-content-right{
+    /* border: 1px solid yellow; */
+    margin-left:  16px;
+    
+    
+}
+
+
+.sub-item3-flex-content-right > h1 {
+    /* border: 1px dashed orangered; */
+    /* color: hsl(236, 13%, 42%); */
+    color: hsl(233, 8%, 79%);
+   
+}
+.sub-item3-flex-content-right  > a  {
+    /* border: 1px dashed purple; */
+    display: inline-block;
+    text-decoration:none;
+    color: #2E3436;
+    
+}
+.sub-item3-flex-content-right  > a :hover {
+
+    /* border: 1px dashed purple; */
+    display: inline-block;
+    text-decoration:none;
+    color: hsl(5, 85%, 63%);
+}
+
+
+.sub-item3-one-flex-content-right > p {
+    
+    /* border: 1px dashed red; */
+    
+}
+
+.sub-item3-flex-content-left {
+     
+
+}
+
+
+.sub-item3-flex-content-left > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+
+}
+    
+}
+
+
+@media screen and (max-width: 375px) {
+    .final-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows:  auto auto auto auto; 
+        gap: 32px;
+        /*Might have to change this; once design complete*/
+        margin: 32px;
+    }
+
+    .item-one-bottom-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item-one-bottom-content-right {
+        margin-left: 0%;
+
+    }
+    
+
+    .item-1 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .item-2 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+    }
+    .item-3 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        display: flex;
+        flex-direction: column;
+        
+        
+        
+    }
+
+    .item-1-desktop-pic {
+        display: none;
+
+    
+    }
+    .item-1-mobile-pic {
+        display: block;
+    
+    }
+
+    .sub-item3-flex-content {
+        margin: 8%;
+    }
+
+    .navigation-menu-icon-closed {
+        display: block;
+        margin-top: 32%;
+    }
+
+    /*TODO("Try and complete on hover to show the navigation railway rack")*/
+
+    .navigation-menu-icon-closed :hover + .navigation-railway-rack {
+        display: block;
+    }
+
+    .navigation-u-list {
+        display: none;
+        
+    }
+
+
+   
+
+    
+ 
+
+    /* body {
+        background-color: tan;
+    } */
+    
+}
