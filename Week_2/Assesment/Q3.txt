@@ -1,0 +1,5 @@
+A refrence error would be thrown because Console is not defined.
+
+The correct function call starts with an undercase c.
+
+The correct way would to to use console.log(). 
