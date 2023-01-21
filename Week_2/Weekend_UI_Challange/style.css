@@ -1,0 +1,42 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    border-radius: 16px;
+    border: 1px solid black;
+    gap: 32px;
+    
+
+}
+
+.card-content-left {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    /* background-color: red; */
+
+}
+
+.card-content-left > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    
+}
+
+.card-content-right {
+    /* background-color: blue; */
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+
+}
