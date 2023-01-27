@@ -1,0 +1,3 @@
+They will NOT output the same results.
+The first function will output  {bar: "hello"}
+THe second function will throw an exception due to a syntax error.
