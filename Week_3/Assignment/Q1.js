@@ -1,8 +1,5 @@
-
-
-
 /**
- * A funtion to remove duplicate items from an array(ignores case sensitivity)
+ * A funtion that removes duplicate items from an array(ignores case sensitivity)
  * @param {[]} arr - The inputed array
  * @returns {[]} `prev` - The final array 
  */

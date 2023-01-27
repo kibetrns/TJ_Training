@@ -1,6 +1,5 @@
- 
- /**
-  * The function clears an array from all unnecessary elements, like false, undefined, empty strings, zero, null
+  /**
+  * A function that clears an array from all unnecessary elements, like false, undefined, empty strings, zero, null
   * @param {[]} arr 
   * @returns {[]}  An array without unnecessary elements
   */

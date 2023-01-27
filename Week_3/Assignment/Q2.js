@@ -1,5 +1,5 @@
 /**
- * The function to find an array contains a specific element. 
+ * A function that finds if an array contains a specific element. 
  * @param {[]} arr - The  input array
  * @param {*} element - The element to check
  * @returns `true` if the element is found `false` otherwise
