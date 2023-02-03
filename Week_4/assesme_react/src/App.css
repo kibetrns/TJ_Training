@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+
+
+.ListInputs > li {
+  text-decoration: none;
+}
+.ListInputs {
+  background-color: red;
+}
