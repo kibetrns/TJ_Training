@@ -17,8 +17,7 @@ main {
     transform: translate(-50%, -50%); */
     justify-content: center;
     align-items: center;
-    display: flex;
-    flex-direction: column;
+    display: grid;
    
    
 }
@@ -31,6 +30,7 @@ main {
     display: flex;
     /* background-color: red; */
     flex-direction: column;
+    display: none;
 }
 .default-message-when-todos-is-empty-container > hr {
     width: 64px;

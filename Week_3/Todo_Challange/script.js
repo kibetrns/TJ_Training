@@ -2,11 +2,17 @@ let newTodo = document.getElementById('all-todos-entries-container');
 let mainContent = document.getElementById('main');
 
 let createTodoButton = document.getElementById("create-todo-button");
-let deleteTodoButton = document.getElementsByClassName('delete-todo-component')[0];
+let deleteTodoButton = document.getElementsByClassName('delete-todo-component');
 
 let generatedStorageKeys = []
 
+console.log(generatedStorageKeys);
 
+let isLocalStorageEmpty = localStorage.getItem.length === 0 || localStorage.getItem.length < 0
+
+console.log(isLocalStorageEmpty);
+
+loadTodosEntries()
 
 createTodoButton.addEventListener("click", () => {
     let titleInputValue = document.getElementById("todo-title").value;
@@ -21,13 +27,16 @@ createTodoButton.addEventListener("click", () => {
     todoDescriptionValue = "";
        
     })
+
+  
     
     deleteTodoButton.addEventListener("click", () => {
-        alert("cli")
+        alert("Clicked")
 
-
+        
 
     })
+
 
 
 
@@ -99,63 +108,93 @@ function createTodoEntry(title, description) {
     deleteButtonElement.appendChild(materialIconsElement)
 
     enteredTodoContainer.setAttribute("id", generatedRandomId);
+    // enteredTodoContainer.setAttribute("onclick", `() => { deleteTodoComponent(${generatedRandomId}) }`)
+    enteredTodoContainer.setAttribute("onclick", `deleteTodoComponent(${generatedRandomId})`)
 
     newTodo.appendChild(enteredTodoContainer);
 
-    localStorage.setItem(`${generatedRandomId}`, JSON.stringify( { "title": `${title}`, "description": `${description}` }));
+    let storedTodos = JSON.parse(localStorage.getItem("todos")) || []
 
-    generatedStorageKeys.push[generatedRandomId]
+    let newTodoToStorage = { "id": `${generatedRandomId}`, "title": `${title}`, "description": `${description}` }
 
-    
+    storedTodos.push(newTodoToStorage )
+
+    localStorage.setItem( "todos", JSON.stringify( storedTodos ) );
+
     return generatedRandomId;
 
 }
 
 
-
 function loadTodosEntries() {
-    if(localStorage.length === 0) {
-        let defaultMessageWhenTodosIsEmptyContainer = document.createElement('div')
-        let topLineElement = document.createElement('hr')
-        let bottomLineElement = document.createElement('hr')
-        let noTasksElement = document.createElement('h3')
-        let noTodos = noTasksElement.innerHTML = "No tasks"
     
-        defaultMessageWhenTodosIsEmptyContainer.appendChild(topLineElement)
-        defaultMessageWhenTodosIsEmptyContainer.appendChild(noTasksElement)
-        defaultMessageWhenTodosIsEmptyContainer.appendChild(bottomLineElement)
+
+    if(isLocalStorageEmpty) {
+        // let defaultMessageWhenTodosIsEmptyContainer = document.createElement('div')
+        // let topLineElement = document.createElement('hr')
+        // let bottomLineElement = document.createElement('hr')
+        // let noTasksElement = document.createElement('h3')
+        // let noTodos = noTasksElement.innerHTML = "No tasks"
+    
+        // defaultMessageWhenTodosIsEmptyContainer.appendChild(topLineElement)
+        // defaultMessageWhenTodosIsEmptyContainer.appendChild(noTasksElement)
+        // defaultMessageWhenTodosIsEmptyContainer.appendChild(bottomLineElement)
     
     
-        defaultMessageWhenTodosIsEmptyContainer.classList.add('default-message-when-todos-is-empty-container')
+        // defaultMessageWhenTodosIsEmptyContainer.classList.add('default-message-when-todos-is-empty-container')
     
     
-        mainContent.appendChild(defaultMessageWhenTodosIsEmptyContainer)
+        // mainContent.appendChild(defaultMessageWhenTodosIsEmptyContainer)
+
+
+
+
+        //  let defaultMessageWhenTodosIsEmptyContainer = document.createElement('div')
+
+        //  let html = `
+        //     <div class="default-message-when-todos-is-empty-container" , id="default-message-when-todos-is-empty-container">
+        //         <hr>
+        //         <h3>No tasks</h3>
+        //         <hr>
+        //     </div>
+        //  `
+
+        //  defaultMessageWhenTodosIsEmptyContainer.innerHTML = html
+
+
+        mainContent.getElementById("#default-message-when-todos-is-empty-container").display = "block"
 
     } else {
 
-        for(let i = 0; generatedStorageKeys.length; i++) { 
+        for(let i = 0; i < generatedStorageKeys.length; i++) { 
 
-            let key = localStorage.key(generatedStorageKeys[i])
+            let keyName = localStorage.key(generatedStorageKeys[i]);
 
-            let value = JSON.parse(localStorage.getItem(key))
+            let value = JSON.parse(localStorage.getItem(keyName));
 
-            console.log(value);
-        
             createTodoEntry(value.title, value.description)
-
         }
     }
 }
 
-loadTodosEntries()
 
 
 
 function deleteTodoComponent(todoId) {
 
-    
+    const element = document.getElementById(`${todoId.id}`)
 
+    element.remove()
+
+    let storedTodos = JSON.parse(localStorage.getItem("todos")) || [];
+
+    let foundTodo = storedTodos.find(todo => todo.id === todoId.id);
+
+    storedTodos = storedTodos.filter(todo => todo.id !== foundTodo.id);
+
+    localStorage.setItem("todos", JSON.stringify(storedTodos));
 }
+
 
 
 function generateRandomId() {
