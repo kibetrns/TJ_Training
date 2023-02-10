@@ -1,0 +1,61 @@
+1.)   props are properties that are passed to a component, it can be of the following data types: objects, arrays, boolean, numbers, and string.
+      State is a value value that can change over time.
+
+2.) In code block one: It would to a type error, constant variable cannot be reassigned
+
+    In code block two: This would also lead to an error, it is an invalid assignment of const 'c2'
+
+    In code block three: This would lead to an error since the properties that are trying to be updated 
+                         are not declared in const c3 initialisation. 
+                         In the last line of the block c3 is reassigned, this is not allowed.
+                         Line 2 and 3 of the block would work if the properties existed, the properties of 
+                         an object declared with const can be mutate
+
+    In general const cannot be reassigned or updated (unless its the properties of an object )
+
+3.) Mounting: This stage is responsible for placing elements to the DOM. It has that are called to enable 
+              this; constructor(), getDerivedStateFromProps(),  render() and componentDidMount(). 
+              They are called in such sequence. 
+    
+    Updating: This stage is fired when a component  has a change in its props or state. The following methods
+              are also called in order when an update occurs: getDerivedStateFromProps(), shouldComponentUpdate(),
+              render(), getSnapShotBeforeUpdate(), componentDidUpdate()
+
+
+    Unmounting: This state is fired when an element is removed from the DOM, the method componentWillUnmount() will 
+                be called when this happens.
+
+
+4. ) Uncontrolled components are elements that whose state are left to the browser to maintain, a component is controlled
+     if the value property or their checked property are set.
+
+5.) It spreads the values of an object or an array. If one had such an object 
+    let planet4Facts = {
+        name: "Mars",
+        color: "Orange-Brown",
+        size: "large",
+        location: "Milky Way",
+    }
+
+    let planet4OtherFacts {
+        waterPrescence: "Yes",
+        Habitable: "Maybe",
+    }
+
+    One could get all the information of the planet with as such:
+
+    let planet4 = { 
+        ...planet4Facts,
+        ...planet4OtherFacts
+        }
+
+        The results would be : { 
+            name: "Mars",
+            color: "Orange-Brown", 
+            size: "large",
+            location: "Milky Way",
+            waterPrescence: "Yes",
+            Habitable: "Maybe"
+         }
+
+ 
