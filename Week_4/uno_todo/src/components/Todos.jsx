@@ -1,44 +1,41 @@
-import React from "react";
-import { useState } from "react";
-
-
+import React, { useState } from "react";
+import SingleTodo from "./SingleTodo";
+import NoTask from "./NoTask";
 
 function Todos() {
+  let [todosInLocalStorage, setTodosInLocalStorage] = useState(
+    JSON.parse(localStorage.getItem("todos")) || []
+  );
 
+  let isLocalStorageEmptyOrKeyDoesentExist = todosInLocalStorage.length === 0;
 
+  console.log(isLocalStorageEmptyOrKeyDoesentExist);
 
-    function createTodoEntry( title, description)  {
-       
+  let todoToList = todosInLocalStorage.map((todo) => (
+    <SingleTodo title={todo.title} description={todo.description} />
+  ));
 
-    }
+  function addTodo(newTodo) {
+    // Add the new todo to the existing todos
+    let updatedTodos = [...todosInLocalStorage, newTodo];
+    // Update the local storage
+    localStorage.setItem("todos", JSON.stringify(updatedTodos));
+    // Update the state with the updated todos
+    setTodosInLocalStorage(updatedTodos);
+  }
 
-    return (
-
-        <div className="all-todos-entries-container" id="all-todos-entries-container">
-             <div className="entered-todo-container">
-
-                <div className="entered-todo-content">
-                    <div className="entered-todo-tile-and-text-container">
-                        <div className="entered-todo-title-content">
-                    
-                            <p className="todo-title">Excersise</p>
-                        </div>
-                        
-                        <div className="entered-todo-description-content">
-                            <p className= "todo-description"> Do some cardiac workouts and torso workouts </p>
-                        </div>
-                    </div>    
-                </div>
-    
-                <div className="delete-todo-component" id="delete-todo-component" onclick="deleteTodoComponent()">
-                    <button>
-                        <i className="material-icons">close</i>
-                    </button>
-                 </div>
-            </div> 
-
-        </div>
-    )
+  return (
+    <div
+      className="all-todos-entries-container"
+      id="all-todos-entries-container"
+    >
+      {isLocalStorageEmptyOrKeyDoesentExist ? (
+        <NoTask />
+      ) : (
+        <ul>{todoToList}</ul>
+      )}
+    </div>
+  );
 }
 
-export default Todos
+export default Todos;

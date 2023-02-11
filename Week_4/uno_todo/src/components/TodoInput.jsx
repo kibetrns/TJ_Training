@@ -1,16 +1,36 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function TodoInput() {
   const [titleInputValue, setTitleInputValue] = useState("");
   const [todoDescriptionValue, setTodoDescriptionValue] = useState("");
+  const [initialTodos] = useState(JSON.parse(localStorage.getItem("todos")) || [] )
+
+
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    const persistedTodos = JSON.parse(localStorage.getItem("todos")) || [];
+    setTodos(persistedTodos);
+  }, [todos]);
+
+
+
+  const addTodo = (newTodo) => {
+    setTodos([...todos, newTodo]);
+    localStorage.setItem("todos", JSON.stringify([...todos, newTodo]));
+    // let todosFromLocalStorage = JSON.parse(localStorage.getItem("todos")) || [];
+    // todosFromLocalStorage.push(newTodo);
+    // setTodos(todosFromLocalStorage);
+    // localStorage.setItem("todos", JSON.stringify(todosFromLocalStorage));
+  };
 
   let titleInputChangeHandler = (e) => {
-    setTitleInputValue({ titleInputValue: e.target.value });
+    setTitleInputValue(e.target.value);
   };
 
   let todoDescriptionHandler = (e) => {
-    setTodoDescriptionValue({ todoDescriptionValue: e.target.value });
+    setTodoDescriptionValue(e.target.value);
   };
 
   function generateRandomId() {
@@ -18,11 +38,11 @@ function TodoInput() {
   }
 
   function createTodoEntry(title, description) {
-    console.log(`TITLE = ${title.value},  DESCRIPTION = ${description}`);
+    console.log(`TITLE = ${title},  DESCRIPTION = ${description}`);
 
     let generatedRandomId = generateRandomId();
 
-    let storedTodos = JSON.parse(localStorage.getItem("todos")) || [];
+    // let storedTodos = JSON.parse(localStorage.getItem("todos")) || [];
 
     let newTodoToStorage = {
       id: generatedRandomId,
@@ -30,24 +50,28 @@ function TodoInput() {
       description: description,
     };
 
-    storedTodos.push(newTodoToStorage);
+    // storedTodos.push(newTodoToStorage);
 
-    localStorage.setItem("todos", JSON.stringify(storedTodos));
+    // localStorage.setItem("todos", JSON.stringify(storedTodos));
+    console.log(newTodoToStorage);
+
+    addTodo(newTodoToStorage);
 
     return generatedRandomId;
   }
 
   let createTodoHandler = (e) => {
-    e.preventDefault();
-
     console.log("CLICKED");
 
-    //TODO("check why the below code is accesed as object properties instead of being string directly")
+    // e.preventDefault();
 
-    createTodoEntry(
-      titleInputValue.titleInputValue,
-      todoDescriptionValue.todoDescriptionValue
-    );
+    if (!titleInputValue || !todoDescriptionValue) {
+      return;
+    }
+    createTodoEntry(titleInputValue, todoDescriptionValue);
+
+    setTitleInputValue("");
+  setTodoDescriptionValue("");
   };
 
   return (
