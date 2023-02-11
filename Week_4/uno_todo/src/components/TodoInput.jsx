@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 function TodoInput() {
   const [titleInputValue, setTitleInputValue] = useState("");
   const [todoDescriptionValue, setTodoDescriptionValue] = useState("");
-  const [initialTodos] = useState(JSON.parse(localStorage.getItem("todos")) || [] )
-
+  const [initialTodos] = useState(
+    JSON.parse(localStorage.getItem("todos")) || []
+  );
 
   const [todos, setTodos] = useState([]);
 
@@ -13,8 +14,6 @@ function TodoInput() {
     const persistedTodos = JSON.parse(localStorage.getItem("todos")) || [];
     setTodos(persistedTodos);
   }, [todos]);
-
-
 
   const addTodo = (newTodo) => {
     setTodos([...todos, newTodo]);
@@ -71,7 +70,7 @@ function TodoInput() {
     createTodoEntry(titleInputValue, todoDescriptionValue);
 
     setTitleInputValue("");
-  setTodoDescriptionValue("");
+    setTodoDescriptionValue("");
   };
 
   return (

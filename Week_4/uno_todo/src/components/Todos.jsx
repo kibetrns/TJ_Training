@@ -3,6 +3,8 @@ import SingleTodo from "./SingleTodo";
 import NoTask from "./NoTask";
 
 function Todos() {
+  const TODOS_KEY = "todos";
+
   let [todosInLocalStorage, setTodosInLocalStorage] = useState(
     JSON.parse(localStorage.getItem("todos")) || []
   );
@@ -11,18 +13,26 @@ function Todos() {
 
   console.log(isLocalStorageEmptyOrKeyDoesentExist);
 
-  let todoToList = todosInLocalStorage.map((todo) => (
-    <SingleTodo title={todo.title} description={todo.description} />
-  ));
-
   function addTodo(newTodo) {
-    // Add the new todo to the existing todos
     let updatedTodos = [...todosInLocalStorage, newTodo];
-    // Update the local storage
-    localStorage.setItem("todos", JSON.stringify(updatedTodos));
-    // Update the state with the updated todos
+    localStorage.setItem(TODOS_KEY, JSON.stringify(updatedTodos));
     setTodosInLocalStorage(updatedTodos);
   }
+
+  function deleteTodo(todoId) {
+    let updatedTodos = todosInLocalStorage.filter((todo) => todo.id !== todoId);
+    localStorage.setItem(TODOS_KEY, JSON.stringify(updatedTodos));
+    setTodosInLocalStorage(updatedTodos);
+  }
+
+  let todoToList = todosInLocalStorage.map((todo) => (
+    <SingleTodo
+      title={todo.title}
+      description={todo.description}
+      id={todo.id}
+      onDelete={deleteTodo}
+    />
+  ));
 
   return (
     <div
@@ -32,7 +42,7 @@ function Todos() {
       {isLocalStorageEmptyOrKeyDoesentExist ? (
         <NoTask />
       ) : (
-        <ul>{todoToList}</ul>
+        <li>{todoToList}</li>
       )}
     </div>
   );

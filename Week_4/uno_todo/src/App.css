@@ -1,17 +1,12 @@
 .App {
   text-align: center;
-  
 }
+
 .display-todos-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
-
-
-
 
 .todo-input-and-add-button {
   display: flex;
@@ -24,23 +19,11 @@
   border: 1px solid black;
   width: 100%;
   margin: 32px;
-
-
 }
 
 /* -------------------------------------------- */
 
-:root {
-  --primary-key-color: #1B1A17;
-  --secondary-key-color: #1F1E1B;
-  --tertiary-key-color: #A35709;
-  --neutral-key-color: #FF8303;
-  --neutral-variant-key-color: #F0E3CA;
-}
 
-body {
-  background-color: var(--primary-key-color);
-}
 
 main {
   /* position: fixed;
@@ -50,8 +33,6 @@ main {
   justify-content: center;
   align-items: center;
   display: grid;
- 
- 
 }
 
 .default-message-when-todos-is-empty-container {
@@ -64,21 +45,15 @@ main {
   flex-direction: column;
 }
 
-.default-message-when-todos-is-empty-container > hr {
+.default-message-when-todos-is-empty-container>hr {
   width: 64px;
   color: var(--neutral-key-color);
- 
-
 }
 
-
-
-.add-todo-component > button {
+.add-todo-component>button {
   border: none;
   background-color: var(--primary-key-color);
   color: var(--neutral-key-color);
-
-  
 }
 
 
@@ -88,9 +63,6 @@ main {
   gap: 16px;
   /* background-color: red;    */
   justify-content: center;
-  /* background-color: red; */
-  
-  
 }
 
 .todo-tile-and-text-container {
@@ -98,15 +70,12 @@ main {
   flex-direction: column;
   gap: 32px;
   /* background-color: red; */
-  
-
-
 }
+
 .todo-title-content {
   border: 2px solid var(--neutral-key-color);
   border-radius: 8px;
   width: fit-content;
-
 }
 
 .todo-title {
@@ -121,7 +90,6 @@ main {
   border: 2px solid var(--neutral-key-color);
   border-radius: 8px;
   width: fit-content;
-
 }
 
 .todo-description {
@@ -130,36 +98,34 @@ main {
   border: 0px solid var(--neutral-key-color);
   background-color: var(--secondary-key-color);
   color: var(--neutral-variant-key-color);
-
 }
 
 .add-todo-component {
   border: 3px solid var(--neutral-key-color);
   border-radius: 8px;
-  
-  
-
 }
 
-.add-todo-component > i {
+.add-todo-component>i {
   padding: 32px;
   border-radius: 8px;
   border: 0px solid var(--neutral-key-color);
   background-color: var(--secondary-key-color);
   color: var(--neutral-key-color);
-  
-  
-
-
 }
+
 .all-todos-entries-container {
   display: flex;
   flex-direction: column-reverse;
-  background-color: red;
+  /* background-color: red; */
   margin-top: 32px;
   align-items: center;
+  justify-content: center;
+}
 
-
+.all-todos-entries-container>li {
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .entered-todo-container {
@@ -175,17 +141,11 @@ main {
   padding-left: 16px;
   padding-right: 16px;
   width: fit-content;
-  
 }
-
 
 .entered-todo-title-content {
   color: var(--neutral-variant-key-color);
 }
-
-
-
-
 
 .delete-todo-component {
   border: 1px solid var(--neutral-key-color);
@@ -194,25 +154,20 @@ main {
   height: fit-content;
   /* margin-left: 1%; */
   margin-left: 32px;
-
 }
 
-
-.delete-todo-component > i {
+.delete-todo-component>i {
   padding: 8px;
   border-radius: 8px;
   border: 0px solid var(--neutral-key-color);
   background-color: var(--secondary-key-color);
   color: var(--tertiary-key-color);
-  
 }
 
-.delete-todo-component > button {
+.delete-todo-component>button {
 
   border: none;
   border-radius: 8px;
   background-color: var(--primary-key-color);
   color: var(--neutral-key-color);
 }
-
-
