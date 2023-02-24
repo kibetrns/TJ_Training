@@ -114,7 +114,7 @@ RETURN (
 
 /*Question 6*/
 
-SELECT FUNCTION calculateAge (@d.o.b date)
+SELECT FUNCTION calculateAge (@d.o.b DATE)
 RETURNS  int
 RETURN 
 GETDATE() - @d.o.b ;
